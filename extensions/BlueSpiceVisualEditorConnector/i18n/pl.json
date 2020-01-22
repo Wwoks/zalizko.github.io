@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Chrumps",
+			"Railfail536",
+			"Rail"
+		]
+	},
+	"bs-visualeditorconnector-inspector-tab-advanced-name": "Zaawansowane",
+	"bs-visualeditorconnector-dialog-media-link": "Linkuj ten plik",
+	"bs-visualeditorconnector-dialog-media-embed": "Osadź ten plik",
+	"bs-vec-dialog-media-change-file": "Zmień plik",
+	"bs-visualeditor-linkcontext-label-change": "Zmień etykietę",
+	"bs-visualeditor-linkcontext-label-label": "Etykieta"
+}

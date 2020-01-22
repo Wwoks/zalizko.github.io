@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"bluespiceeditnotifyconnector-desc": "EditNotify'ı kullanıcı seçenekleri ile genişletir",
+	"bluespiceeditnotifyconnector-action-message": "Seçilen ad alanları için bildirim oluştur veya düzenle gönderilecektir.",
+	"prefs-categories": "Kategori olaylarıyla ilgili bildirimler",
+	"prefs-namespace-notifications": "Ad alanı olaylarıyla ilgili bildirimler",
+	"prefs-category-notifications": "Kategorilerdeki bildirimler"
+}

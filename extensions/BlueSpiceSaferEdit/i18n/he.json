@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Guycn2"
+		]
+	},
+	"bs-saferedit-desc": "שמירת ביניים של עריכות ויקי",
+	"bs-saferedit-user-editing": "$1 {{GENDER:$1|עורך|עורכת}} את הדף",
+	"bs-saferedit-someone-editing": "הדף נערך כרגע",
+	"bs-saferedit-pref-interval": "לאחר כמה זמן לשמור גרסת גיבוי:",
+	"bs-saferedit-pref-shownameofeditinguser": "הצגת שם העורך הנוכחי"
+}

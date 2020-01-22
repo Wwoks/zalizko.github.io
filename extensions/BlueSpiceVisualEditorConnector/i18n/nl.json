@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Elroy",
+			"Mainframe98"
+		]
+	},
+	"bs-visualeditorconnector-desc": "Koppelt BlueSpice aan VisualEditor",
+	"bs-visualeditorconnector-enable-visualeditor": "VisualEditor inschakelen voor uitbreidingen van BlueSpice",
+	"bs-visualeditorconnector-cancel-edit": "Bewerking annuleren",
+	"bs-visualeditor-nsm-label": "Visueel bewerkingsprogramma",
+	"bs-visualeditorconnector-inspector-tab-common-name": "Gangbaar",
+	"bs-visualeditorconnector-inspector-tab-advanced-name": "Uitgebreid",
+	"bs-visualeditorconnector-text-style-tool-color-label": "Tekstkleur",
+	"bs-visualeditorconnector-dialog-media-embed": "Dit bestand insluiten",
+	"bs-vec-table-inspector-column": "Kolom",
+	"bs-vec-table-inspector-row": "Rij",
+	"bs-vec-table-inspector-cell": "Cel",
+	"bs-vec-table-style-column-width": "Kolombreedte",
+	"bs-vec-table-style-row-height": "Rijhoogte (px)",
+	"bs-vec-contextitem-cell-style-add-options-title": "Cel opties",
+	"bs-vec-contextitem-column-style-add-options-title": "Kolom opties",
+	"bs-vec-contextitem-row-style-add-options-title": "Rij opties",
+	"bs-vec-contextitem-row-duplicate": "Dubbele rij",
+	"bs-vec-contextitem-column-duplicate": "Dubbele kolom",
+	"bs-vec-contextitem-table-additional-options": "Extra opties",
+	"bs-vec-dialog-table-create-number-of-rows": "Aantal rijen",
+	"bs-vec-dialog-table-create-number-of-columns": "Aantal kolommen",
+	"bs-vec-dialog-action-done": "Afgerond",
+	"bs-vec-dialog-action-safe": "Annuleren",
+	"bs-vec-dialog-create-table-title": "Tabel invoegen",
+	"bs-vec-widget-text-direction-tooltip": "Verticale tekst",
+	"bs-vec-dialog-media-change-file": "Bestand wijzigen",
+	"bs-visualeditorconnector-dialog-media-meta-link": "Koppeling naar beschrijvingspagina van bestand",
+	"bs-visualeditor-linkcontext-label-change": "Etiket wijzigen",
+	"bs-visualeditor-linkcontext-label-label": "Etiket"
+}

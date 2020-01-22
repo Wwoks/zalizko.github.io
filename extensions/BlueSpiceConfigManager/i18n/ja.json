@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Shirayuki",
+			"Suyama"
+		]
+	},
+	"action-bluespiceconfigmanager-viewspecialpage": "特別ページ「{{int:bluespiceconfigmanager}}」の閲覧",
+	"right-bluespiceconfigmanager-viewspecialpage": "特別ページ [[Special:BlueSpiceConfigManager]] を利用"
+}

@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"bs-visualeditorconnector-cancel-edit": "Ännerung annuléieren",
+	"bs-visualeditor-nsm-label": "Visuellen Editeur",
+	"bs-visualeditorconnector-inspector-tab-common-name": "Gemeinsam",
+	"bs-visualeditorconnector-inspector-tab-advanced-name": "Erweidert",
+	"bs-visualeditorconnector-upload-type-original": "Original",
+	"bs-visualeditorconnector-upload-type-simple": "Einfach",
+	"apihelp-bs-vec-restbase-mock-param-wikitext": "Wikitext fir ze verschaffen",
+	"bs-vec-table-inspector-column": "Kolonn",
+	"bs-vec-table-inspector-row": "Rei",
+	"bs-vec-table-inspector-cell": "Zell",
+	"bs-vec-contextitem-row-style-add-options-title": "Optioune vun de Reien",
+	"bs-vec-contextitem-table-additional-options": "Zousätzlech Optiounen",
+	"bs-vec-dialog-table-create-number-of-rows": "Zuel vun de Reien",
+	"bs-vec-dialog-table-create-number-of-columns": "Zuel vun de Kolonnen",
+	"bs-vec-dialog-action-done": "Fäerdeg",
+	"bs-vec-dialog-action-safe": "Ofbriechen",
+	"bs-vec-dialog-create-table-title": "Tabell drasetzen",
+	"bs-vec-widget-text-direction-tooltip": "Vertikalen Text",
+	"bs-vec-dialog-media-change-file": "Fichier änneren",
+	"bs-visualeditor-linkcontext-label-change": "Etikett änneren",
+	"bs-visualeditor-linkcontext-label-label": "Etikett"
+}

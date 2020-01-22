@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ykhwong"
+		]
+	},
+	"bs-visualeditorconnector-desc": "시각편집기로 블루스파이스에 연결합니다",
+	"bs-visualeditorconnector-enable-visualeditor": "블루스파이스 확장기능을 위해 시각편집기를 활성화합니다",
+	"bs-visualeditorconnector-cancel-edit": "편집 취소",
+	"bs-visualeditor-nsm-label": "시각편집기",
+	"bs-visualeditorconnector-inspector-tab-common-name": "공통",
+	"bs-visualeditorconnector-inspector-tab-advanced-name": "고급",
+	"apihelp-bs-vec-transformtowikitext-description": "시각편집기 HTML을 위키텍스트로 변환합니다",
+	"apihelp-bs-vec-transformtowikitext-summary": "시각편집기 HTML을 위키텍스트로 변환합니다",
+	"apihelp-bs-vec-transformtohtml-description": "위키텍스트를 시각편집기 HTML로 변환합니다",
+	"apihelp-bs-vec-transformtohtml-summary": "위키텍스트를 시각편집기 HTML로 변환합니다",
+	"bs-visualeditorconnector-ve-fullwidth-option": "표에 꽉찬 너비 사용",
+	"bs-visualeditorconnector-ve-style-option-description": "표 스타일 선택",
+	"bs-visualeditorconnector-ve-style-option": "표 스타일",
+	"bs-visualeditorconnector-text-style-tool-color-label": "텍스트 색",
+	"bs-visualeditorconnector-dialog-media-link": "이 파일 링크하기",
+	"bs-visualeditorconnector-dialog-media-embed": "이 파일 임베드하기",
+	"bs-vec-table-inspector-cell": "셀",
+	"bs-vec-contextitem-table-additional-options": "추가 옵션",
+	"bs-vec-dialog-action-done": "완료",
+	"bs-vec-dialog-action-safe": "취소",
+	"bs-vec-dialog-media-change-file": "파일 변경",
+	"apihelp-bs-vec-restbase-mock-param-wikitext": "처리할 위키텍스트",
+	"bs-vec-contextitem-cell-style-add-options-title": "셀 옵션",
+	"bs-vec-contextitem-column-style-add-options-title": "열 옵션",
+	"bs-vec-contextitem-row-style-add-options-title": "줄 옵션",
+	"bs-vec-contextitem-row-duplicate": "줄 복제",
+	"bs-vec-contextitem-column-duplicate": "열 복제",
+	"bs-vec-dialog-table-create-number-of-rows": "줄 수",
+	"bs-vec-dialog-table-create-number-of-columns": "열 수",
+	"bs-vec-dialog-create-table-title": "표 추가",
+	"bs-visualeditor-linkcontext-label-change": "레이블 변경",
+	"bs-visualeditor-linkcontext-label-label": "레이블",
+	"bs-visualeditorconnector-dialog-media-meta-link": "파일 설명 문서의 링크 추가"
+}

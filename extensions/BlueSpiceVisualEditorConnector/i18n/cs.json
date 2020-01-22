@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Patriccck",
+			"Nixtonin"
+		]
+	},
+	"apihelp-bs-vec-transformtowikitext-description": "Transformuje Vizuální editor HTML do Wikitextu",
+	"apihelp-bs-vec-transformtowikitext-summary": "Transformuje Vizuální editor HTML na Wikitext",
+	"apihelp-bs-vec-transformtohtml-description": "Transformuje WikiText do Vizuálního editoru HTML",
+	"apihelp-bs-vec-transformtohtml-summary": "Transformuje Wikitext do Vizuálního editoru HTML",
+	"apihelp-bs-vec-transformtowikitext-param-html": "Vizuální editor HTML, který by měl být převeden na WikiText",
+	"bs-vec-dialog-media-change-file": "Změň soubor"
+}

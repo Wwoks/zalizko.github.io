@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Astrind"
+		]
+	},
+	"bs-vec-table-inspector-column": "Stupac",
+	"bs-vec-table-inspector-row": "Redak",
+	"bs-vec-table-inspector-cell": "Ćelija",
+	"bs-vec-table-style-column-width": "Širina stupca",
+	"bs-vec-table-style-row-height": "Visina reda (px)",
+	"bs-vec-contextitem-cell-style-add-options-title": "Opcije ćelija",
+	"bs-vec-contextitem-column-style-add-options-title": "Opcije stupca",
+	"bs-vec-contextitem-row-style-add-options-title": "Opcije retka",
+	"bs-vec-contextitem-row-duplicate": "Dupliciraj redak",
+	"bs-vec-contextitem-column-duplicate": "Dupliciraj stupac",
+	"bs-vec-contextitem-table-additional-options": "Dodatne opcije",
+	"bs-vec-dialog-table-create-number-of-rows": "Broj redova",
+	"bs-vec-dialog-table-create-number-of-columns": "Broj stupaca",
+	"bs-vec-dialog-action-done": "Gotovo",
+	"bs-vec-dialog-action-safe": "Otkaži",
+	"bs-vec-dialog-create-table-title": "Umetni tablicu",
+	"bs-vec-widget-text-direction-tooltip": "Vertikalni tekst",
+	"bs-vec-row-duplicate-has-merged": "Odabrani red sadrži ćelije koje obuhvaćaju više redova, te se ne mogu duplicirati."
+}

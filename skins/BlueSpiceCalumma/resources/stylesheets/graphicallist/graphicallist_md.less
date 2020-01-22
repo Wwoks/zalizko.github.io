@@ -1,0 +1,35 @@
+@import "../dimensions.less";
+@import "../colors.less";
+@import "../fonts.less";
+
+.dynamic-graphical-list-outer-east {
+	left: @navigation-main-width;
+	top: @menu-top-height + @banner-top-height;
+	min-width: 674px;
+	width: calc(~"100vw - @{navigation-main-width}");
+	height: calc(100vh ~" - " ( @menu-top-height + @banner-top-height ) );
+}
+
+.dynamic-graphical-list-outer-west {
+	right: @sitetools-main-width;
+	top: @menu-top-height + @banner-top-height;
+	min-width: 674px;
+	width: calc(~"100vw - @{sitetools-main-width}");
+	height: calc(100vh ~" - " ( @menu-top-height + @banner-top-height ) );
+}
+
+.dynamic-graphical-list-outer-south {
+	left: @navigation-main-width;
+	top: @menu-top-height + @banner-top-height;
+	width: calc(~"100vw - @{navigation-main-width} - @{sitetools-main-width}");
+	max-height: calc(100vh ~" - " ( @menu-top-height + @banner-top-height ) );
+	height: auto;
+}
+
+.dynamic-graphical-list-outer-north {
+	left: @navigation-main-width;
+	bottom: 0px;
+	width: calc(~"100vw - @{navigation-main-width} - @{sitetools-main-width}");
+	max-height: calc(100vh ~" - " ( @menu-top-height + @banner-top-height ) );
+	height: auto;
+}

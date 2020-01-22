@@ -1,0 +1,8 @@
+{
+	"@metadata": [],
+	"bluespiceeditnotifyconnector-desc": "Proširenje EditNotify sa korisničkim opcijama",
+	"bluespiceeditnotifyconnector-action-message": "Kreirana ili izmenjena obaveštenja za odabrane imenske prostore će biti poslata.",
+	"prefs-categories": "Obaveštenja o događajima sa kategorijama",
+	"prefs-namespace-notifications": "Obaveštenja o događajima sa imenskim prostorijama",
+	"prefs-category-notifications": "Obaveštenja na kategorijama"
+}

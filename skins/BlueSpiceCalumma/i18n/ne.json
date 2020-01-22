@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nirjal stha",
+			"पर्वत सुबेदी"
+		]
+	},
+	"bs-to-top-desc": "पृष्ठको सिरानमा जानुहोस्",
+	"bs-action-new-please-login-title": "नयाँ पृष्ठ थप्न कृपया प्रवेश गर्नुहोस्।",
+	"bs-action-edit-please-login-title": "यस पृष्ठ सम्पादन गर्न कृपया प्रवेश गर्नुहोस्।",
+	"bs-action-edit-disabled-title": "{{GENDER:|You}} यो पृष्ठ सम्पादन गर्न तपाईसँग अनुमति छैन।"
+}

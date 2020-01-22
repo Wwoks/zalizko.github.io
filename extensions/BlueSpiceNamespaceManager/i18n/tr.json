@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Violetanka",
+			"Hedda",
+			"BaRaN6161 TURK"
+		]
+	},
+	"bs-namespacemanager-desc": "Kullanıcıalanı ekleme, düzenleme ve silme için yönetim arayüzü",
+	"bs-namespacemanager-hide-system-ns": "Sistem ad alanlarını gizle",
+	"bs-namespacemanager-label-system": "Sistem"
+}

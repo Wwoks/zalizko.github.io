@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"StanProg",
+			"ShockD"
+		]
+	},
+	"bs-insertfile-enable-align": "Включване",
+	"bs-insertfile-advanced-search-panel-label": "Разширено търсене",
+	"bs-insertfile-lastmodified": "Последни промени",
+	"bs-insertfile-labelupload": "Качване"
+}

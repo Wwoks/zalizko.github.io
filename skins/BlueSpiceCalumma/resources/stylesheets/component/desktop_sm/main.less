@@ -1,0 +1,36 @@
+body.mediawiki,
+body.mediawiki.x-body {
+	@btn-width: 3rem;
+	@clearance: 1rem;
+
+	&:not( .navigation-main-collapse ):not( .sitetools-main-collapse ) {
+		.bs-content.container {
+			@container-width: "( 100vw - @{navigation-main-width} - @{sitetools-main-width} - 2 * @{btn-width} )";
+			width: calc( ~"@{container-width}" );
+		}
+	}
+
+	/* collapsing elements */
+	&.navigation-main-collapse.sitetools-main-collapse {
+		.bs-content.container {
+			@container-width: "( 100vw - 2 * @{btn-width} )";
+			width: calc( ~"@{container-width} - 2 * @{clearance}" );
+		}
+	}
+
+	&:not( .navigation-main-collapse ).sitetools-main-collapse {
+		.bs-content.container {
+			@container-width: "( 100vw - ( 2 * @{btn-width} ) - @{navigation-main-width} )";
+			width: calc( ~"@{container-width} -  @{clearance}" );
+			margin-left: calc(~"0.9375rem + ( ( 100vw + @{navigation-main-width} - @{btn-width} ) - @{container-width} ) / 2");
+		}
+	}
+
+	&:not( .sitetools-main-collapse ).navigation-main-collapse {
+		.bs-content.container {
+			@container-width: "( 100vw - ( 2 * @{btn-width} ) - @{sitetools-main-width} )";
+			width: calc( ~"@{container-width} -  @{clearance}" );
+			margin-right: calc(~"0.875rem + ( ( 100vw + @{sitetools-main-width} - @{btn-width} ) - @{container-width}) / 2 ");
+		}
+	}
+}

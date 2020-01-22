@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sayginer",
+			"Grkn gll",
+			"BaRaN6161 TURK"
+		]
+	},
+	"prefs-statistics": "Genişletilmiş istatistikler",
+	"extendedstatistics": "Genişletilmiş istatistikler",
+	"bs-statistics-year": "Yıl",
+	"bs-statistics-day": "Gün",
+	"bs-statistics-not-allowed": "Gerekli izne sahip değilsiniz.",
+	"bs-statistics-diag-number-of-users": "Kullanıcı sayısı",
+	"bs-statistics-diag-number-of-pages-desc": "Seçilen dönem içinde oluşturulan sayfaların toplam sayısını görüntüler.",
+	"bs-statistics-label-creator": "Oluşturan",
+	"bs-statistics-diag-number-of-edits": "Değişiklik sayısı",
+	"bs-statistics-diag-number-of-edits-desc": "Seçilen dönem içinde yapılan değişikliklerin toplam sayısını görüntüler.",
+	"bs-statistics-label-searchterm": "Arama terimi",
+	"bs-statistics-filter-category": "Kategori",
+	"bs-statistics-pref-excludeusers": "Şu kullanıcılar hariç:",
+	"bs-statistics-portlet-numberofusers": "Kullanıcı sayısı",
+	"bs-statistics-portlet-numberofedits": "Değişiklik sayısı",
+	"bs-statistics-portlet-numberofpages": "Sayfa sayısı",
+	"bs-statistics-portletconfig-periodday": "Dün",
+	"action-extendedstatistics-viewspecialpage-aggregated": "özel sayfaya eriş [[Special:AggregatedStatistic]]",
+	"right-extendedstatistics-viewspecialpage-aggregated": "Özel sayfaya erişin [[Special:AggregatedStatistic]]",
+	"bs-statistics-button-label-apply": "Filtreleri uygula",
+	"bs-statistics-label-bar-chart": "Çubuk grafik",
+	"bs-statistics-label-line-chart": "Çizgi grafik",
+	"bs-statistics-datasource-label": "Veri kaynağı",
+	"bs-statistics-targets-label": "Hedefler"
+}

@@ -1,0 +1,141 @@
+{
+	"name": "BlueSpicePermissionManager",
+	"license-name":"GPL-3.0-only",
+	"version": "3.1.2",
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:PermissionManager",
+	"author": "Dejan Savuljesku <savuljesku@hallowelt.com>",
+	"descriptionmsg": "bs-permissionmanager-desc",
+	"type": "bluespice",
+	"requires": {
+		"MediaWiki": "~1.31",
+		"extensions": {
+			"BlueSpiceFoundation": "~3.1"
+		}
+	},
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpicePermissionManager": {
+					"className": "BlueSpice\\PermissionManager\\Extension",
+					"extPath": "/BlueSpicePermissionManager",
+					"configDefinitions": {
+						"PermissionManagerMaxBackups": "\\BlueSpice\\PermissionManager\\ConfigDefinition\\PermissionManagerMaxBackups::getInstance"
+					}
+				}
+			},
+			"AdminToolRegistry": {
+				"bs-permission-manager": "BlueSpice\\PermissionManager\\AdminTool"
+			},
+			"PermissionRegistry": {
+				"permissionmanager-viewspecialpage": {
+					"type": "namespace",
+					"roles": [
+						"admin",
+						"maintenanceadmin"
+					]
+				}
+			}
+		}
+	},
+	"AvailableRights": [
+		"permissionmanager-viewspecialpage"
+	],
+	"GroupPermissions": {
+		"*": {
+			"permissionmanager-viewspecialpage": false
+		},
+		"user": {
+			"permissionmanager-viewspecialpage": false
+		},
+		"bureaucrat": {
+			"permissionmanager-viewspecialpage": false
+		},
+		"sysop": {
+			"permissionmanager-viewspecialpage": true
+		}
+	},
+	"APIModules": {
+		"bs-permissionmanager-tasks": "BlueSpice\\PermissionManager\\Api\\ApiPermissionManager",
+		"bs-role-permission-store": "BlueSpice\\PermissionManager\\Api\\RolePermissionsStore"
+	},
+	"LogTypes": [
+		"bs-permission-manager"
+	],
+	"FilterLogTypes": {
+		"bs-permission-manager": true
+	},
+	"LogActionsHandlers": {
+		"bs-permission-manager/*": "LogFormatter"
+	},
+	"SpecialPages": {
+		"PermissionManager": "BlueSpice\\PermissionManager\\Special\\SpecialPermissionManager"
+	},
+	"MessagesDirs": {
+		"PermissionManager": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"PermissionManagerAlias": "PermissionManager.alias.php"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpicePermissionManager/resources"
+	},
+	"ResourceModules": {
+		"ext.bluespice.permissionManager": {
+			"scripts": [
+				"bluespice.permissionManager.js"
+			],
+			"dependencies": [
+				"ext.bluespice.extjs"
+			],
+			"messages": [
+				"bs-permissionmanager-header-role",
+				"bs-permissionmanager-header-global",
+				"bs-permissionmanager-header-namespaces",
+				"bs-permissionmanager-header-group",
+				"bs-permissionmanager-btn-group-label",
+				"bs-permissionmanager-btn-save-label",
+				"bs-permissionmanager-btn-save-in-progress-label",
+				"bs-permissionmanager-save-success",
+				"bs-permissionmanager-unsaved-changes",
+				"bs-permissionmanager-affected-by-explicit",
+				"bs-permissionmanager-affected-by-inherited",
+				"bs-permissionmanager-affected-by-notset",
+				"bs-permissionmanager-affected-by-explicitlyset",
+				"bs-permissionmanager-affected-by-setonwiki",
+				"bs-permissionmanager-show-system-groups-label",
+				"bs-permissionmanager-role-permissions-label",
+				"bs-permissionmanager-role-permissions-column-permission",
+				"bs-permissionmanager-role-permissions-column-permission-desc",
+				"bs-premissionmanager-reset-button-label",
+				"bs-permissionmanager-affected-by-dependency-single",
+				"bs-permissionmanager-affected-by-dependency"
+			]
+		},
+		"ext.bluespice.permissionManager.styles": {
+			"styles": "bluespice.permissionManager.css"
+		}
+	},
+	"Hooks": {
+		"BSGroupManagerGroupDeleted": "\\BlueSpice\\PermissionManager\\Hook\\BSGroupManagerGroupDeleted\\UnassignRoles::callback",
+		"BSGroupManagerGroupNameChanged": [
+			"\\BlueSpice\\PermissionManager\\Hook\\BSGroupManagerGroupNameChanged\\ChangeGroupRoleAssignments::callback"
+		]
+	},
+	"config_prefix": "bsg",
+	"config": {
+		"PermissionManagerMaxBackups": {
+			"value": 50,
+			"descriptionmsg": "bs-permissionmanager-pref-max-backups",
+			"public": true
+		}
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\PermissionManager\\" : "src/"
+	},
+	"callback": "BlueSpice\\PermissionManager\\Extension::onCallback",
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

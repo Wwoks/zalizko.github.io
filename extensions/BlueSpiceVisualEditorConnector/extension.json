@@ -1,0 +1,408 @@
+{
+	"name": "BlueSpiceVisualEditorConnector",
+	"license-name": "GPL-3.0-only",
+	"version": "3.1.2",
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:BlueSpiceVisualEditorConnector",
+	"author": [
+		"Markus Glaser"
+	],
+	"descriptionmsg": "bs-visualeditorconnector-desc",
+	"type": "bluespice",
+	"requires": {
+		"MediaWiki": "~1.31",
+		"extensions": {
+			"BlueSpiceFoundation": "~3.1",
+			"VisualEditor": "=0.1.0",
+			"OOJSPlus": "*"
+		}
+	},
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceVisualEditorConnector": {
+					"className": "\\BlueSpice\\VisualEditorConnector\\Extension",
+					"extPath": "/BlueSpiceVisualEditorConnector",
+					"status": "beta",
+					"package": "BlueSpice Pro",
+					"configDefinitions": {
+						"VisualEditorConnectorEnableVisualEditor": "\\BlueSpice\\VisualEditorConnector\\ConfigDefinition\\EnableVisualEditor::getInstance",
+						"VisualEditorConnectorSimpleSaveProcess": "\\BlueSpice\\VisualEditorConnector\\ConfigDefinition\\SimpleSaveProcess::getInstance",
+						"VisualEditorConnectorUploadDialogType": "\\BlueSpice\\VisualEditorConnector\\ConfigDefinition\\UploadDialogType::getInstance"
+					}
+				}
+			}
+		},
+		"BlueSpiceVisualEditorConnector": {
+			"PluginModules": [
+				"ext.bluespice.visualEditorConnector.tablestyleplugin"
+			],
+			"TagDefinitions": [],
+			"PostProcessors": {}
+		},
+		"BlueSpiceSimpleFarmer": {
+			"DynamicConfigurationFactories": {
+				"virtualrestparsoiddomain": "\\BlueSpice\\VisualEditorConnector\\SimpleFarmer\\DynamicConfiguration\\VirtualRestConfig::factory"
+			}
+		},
+		"VisualEditor": {
+			"PluginModules": [
+				"ext.bluespice.visualEditorConnector.plugin"
+			]
+		},
+		"BlueSpiceSaferEdit": {
+			"EnvironmentCheckers": {
+				"veaction": "\\BlueSpice\\VisualEditorConnector\\SaferEdit\\EnvironmentChecker\\VeActionChecker::factory"
+			}
+		}
+	},
+	"callback": "BlueSpice\\VisualEditorConnector\\Extension::onRegistration",
+	"APIModules": {
+		"bs-vec-transformtowikitext": "BlueSpice\\VisualEditorConnector\\Api\\TransformToWikiText",
+		"bs-vec-transformtohtml": "BlueSpice\\VisualEditorConnector\\Api\\TransformToHtml",
+		"bs-vec-restbase-mock": "BlueSpice\\VisualEditorConnector\\Api\\RestbaseMock"
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\VisualEditorConnector\\": "src/"
+	},
+	"MessagesDirs": {
+		"VisualEditorConnector": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.bluespice.visualEditorConnector": {
+			"scripts": [
+				"ve/init/sa/BlueSpiceTarget.js",
+				"ui/widget/TextInputMWVisualEditor.js",
+				"bluespice.visualEditorConnector.js"
+			],
+			"styles": [
+				"bluespice.visualEditorConnector.css"
+			],
+			"dependencies": [
+				"ext.visualEditor.core",
+				"ext.visualEditor.mediawiki",
+				"ext.visualEditor.standalone",
+				"ext.visualEditor.core.desktop",
+				"ext.visualEditor.mwcore",
+				"ext.visualEditor.mwextensions.desktop",
+				"ext.visualEditor.icons",
+				"ext.bluespice.oojs",
+				"oojs-ui",
+				"mediawiki.api"
+			]
+		},
+		"ext.visualEditor.standalone": {
+			"scripts": [
+				"../../VisualEditor/lib/ve/src/init/sa/ve.init.sa.js",
+				"../../VisualEditor/lib/ve/src/init/sa/ve.init.sa.Platform.js",
+				"../../VisualEditor/lib/ve/src/init/sa/ve.init.sa.Target.js",
+				"../../VisualEditor/lib/ve/src/init/sa/ve.init.sa.DesktopTarget.js"
+			],
+			"styles": [
+				"../../VisualEditor/lib/ve/src/init/sa/styles/ve.init.sa.css"
+			],
+			"dependencies": [
+				"ext.visualEditor.mediawiki"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.plugin": {
+			"scripts": [
+				"ve-visualeditorconnector/ve.init.bs.CancelEditButton.js",
+				"ve-visualeditorconnector/ve.init.bs.HideAfterContent.js",
+				"ve-visualeditorconnector/ve.init.bs.PreventCellEditInTableSelectionInIE11.js",
+				"ve-visualeditorconnector/ve.init.bs.ClearStorageAfterSave.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.mwcore"
+			],
+			"messages": [
+				"bs-visualeditorconnector-cancel-edit"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.overrides.classes": {
+			"scripts": [
+				"bs.vec/ce/Surface.js",
+				"bs.vec/ui/AnnotationContextItem.js",
+				"bs.vec/ui/LinkContextItem.js",
+				"bs.vec/ui/MWInternalLinkContextItem.js",
+				"bs.vec/ui/tools/MWHelpPopupTool.js",
+				"bs.vec/ui/MWLinkAnnotationInspector.js",
+				"bs.vec/ui/MWMediaDialog.js",
+				"bs.vec/ui/MWSaveDialog.js",
+				"bs.vec/ui/MWTableDialog.js",
+				"bs.vec/ui/MWMetaDialog.js",
+				"bs.vec/ui/plugin/MWMediaDialog.js",
+				"bs.vec/ui/plugin/MWSaveDialog.js",
+				"bs.vec/ui/plugin/MWTableDialog.js",
+				"bs.vec/ui/plugin/MWMetaDialog.js",
+				"bs.vec/ui/ForeignStructuredUpload/BookletLayout.js",
+				"bs.vec/ui/ForeignStructuredUpload/BookletLayoutSimple.js",
+				"bs.vec/ui/ForeignStructuredUpload/BookletLayoutOneClick.js",
+				"bs.vec/ui/datatransferhandlers/bs.vec.ui.InternalUrlHTMLStringTransferHandler.js",
+				"ve/dm/bs.dm.TableRowNode.js",
+				"ve/dm/bs.dm.TableCellNode.js",
+				"ve/dm/bs.dm.InternalFileLinkAnnotation.js",
+				"ve/ce/bs.ce.InternalFileLinkAnnotation.js",
+				"ve/dm/bs.dm.InternalMediaLinkAnnotation.js",
+				"ve/ce/bs.ce.InternalMediaLinkAnnotation.js",
+				"ve/contextitem/bs.ui.InternalFileLinkContextItem.js",
+				"ve/TableStyleApplicator.js",
+				"ve/ce/bs.ce.TableRowNode.js",
+				"ve/ce/bs.ce.TableCellNode.js",
+				"ve/ui/TableLineContext.js",
+				"ve/action/TableActionOverride.js",
+				"ve/ve.dm.MWInternalLinkAnnotation.override.js"
+			],
+			"styles": [
+				"bs.vec/styles/LinkContextItem.css"
+			],
+			"messages": [
+				"bs-visualeditor-linkcontext-label-label",
+				"bs-visualeditor-linkcontext-label-change"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.overrides": {
+			"scripts": [
+				"bluespice.visualEditorConnector.overrides.js"
+			],
+			"messages": [
+				"bs-visualeditorconnector-dialog-media-link",
+				"bs-visualeditorconnector-dialog-media-meta-link",
+				"bs-visualeditorconnector-dialog-media-embed",
+				"bs-vec-dialog-media-change-file"
+			],
+			"group": "bsvec-override"
+		},
+		"ext.bluespice.visualEditorConnector.tags.classes": {
+			"scripts": [
+				"bs.vec/util/tag/Definition.js",
+				"bs.vec/util/tag/Registry.js",
+				"bs.vec/ui/widget/GroupListInputWidget.js"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.tags": {
+			"scripts": [
+				"bluespice.visualEditorConnector.tags.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.desktopArticleTarget.init"
+			],
+			"messages": [
+				"bs-visualeditorconnector-inspector-tab-common-name",
+				"bs-visualeditorconnector-inspector-tab-advanced-name"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.SaveProcessOverride": {
+			"scripts": [
+				"bluespice.visualEditorConnector.SaveProcessOverride.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.mwcore"
+			],
+			"targets": [
+				"desktop"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.tablestyleplugin": {
+			"scripts": [
+				"bs.vec/TableStyleRegistry.js",
+				"bs.vec/ui/tableStyles/TableStyle.js",
+				"bs.vec/ui/tableStyles/RowHeightStyle.js",
+				"bs.vec/ui/tableStyles/CellBackgroundStyle.js",
+				"bs.vec/ui/tableStyles/TextDirectionStyle.js",
+				"bs.vec/ui/tableStyles/ColumnWidthStyle.js",
+				"ve/dialog/TableAdditionalOptions.js",
+				"ve/dialog/CreateTableOptions.js",
+				"ve/widget/CommandWidget.js",
+				"ve/widget/NumberCommandWidget.js",
+				"ve/widget/ButtonCommandWidget.js",
+				"ve/widget/RowHeightWidget.js",
+				"ve/widget/ColumnWidthWidget.js",
+				"ve/widget/ColorCommandWidget.js",
+				"ve/widget/CellBackgroundWidget.js",
+				"ve/widget/TextDirectionWidget.js",
+				"ve/action/TableAction.js",
+				"ve/command/TableStyleCommands.js",
+				"ve/contextitem/TableContextItem.js",
+				"ve/contextitem/RowStyleContextItem.js",
+				"ve/contextitem/ColumnStyleContextItem.js",
+				"ve/contextitem/CellStyleContextItem.js",
+				"ui/plugin/TableOptions.js",
+				"ui/plugin/FullWidthOption.js"
+			],
+			"dependencies": [
+				"ext.bluespice.extjs"
+			],
+			"messages": [
+				"bs-visualeditorconnector-ve-fullwidth-option",
+				"bs-visualeditorconnector-ve-style-option-description",
+				"bs-visualeditorconnector-ve-style-option",
+				"bs-vec-table-inspector-column",
+				"bs-vec-table-inspector-row",
+				"bs-vec-table-inspector-cell",
+				"bs-vec-table-style-column-width",
+				"bs-vec-table-style-row-height",
+				"bs-vec-contextitem-cell-style-add-options-title",
+				"bs-vec-contextitem-column-style-add-options-title",
+				"bs-vec-contextitem-row-style-add-options-title",
+				"bs-vec-contextitem-row-duplicate",
+				"bs-vec-contextitem-column-duplicate",
+				"bs-vec-contextitem-table-additional-options",
+				"bs-vec-dialog-table-create-number-of-rows",
+				"bs-vec-dialog-table-create-number-of-columns",
+				"bs-vec-dialog-action-done",
+				"bs-vec-dialog-action-safe",
+				"bs-vec-dialog-create-table-title",
+				"bs-vec-widget-text-direction-tooltip",
+				"bs-vec-row-duplicate-has-merged"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.styleInspector": {
+			"scripts": [
+				"bs.vec/ui/styleTool/ButtonTool.js",
+				"bs.vec/ui/styleTool/Bold.js",
+				"bs.vec/ui/styleTool/Italic.js",
+				"bs.vec/ui/styleTool/Color.js",
+				"bs.vec/ui/styleTool/Code.js",
+				"bs.vec/ui/styleTool/Small.js",
+				"bs.vec/ui/styleTool/Big.js",
+				"bs.vec/ui/styleTool/Strikethrough.js",
+				"bs.vec/ui/styleTool/Underline.js",
+				"bs.vec/TextStyleToolRegistry.js",
+				"bs.vec/ui/widget/TextStylePopup.js",
+				"bluespice.visualEditorConnector.styleInspector.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.core",
+				"ext.bluespice.visualEditorConnector.textColor"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.textColor": {
+			"scripts": [
+				"ve/ColorAnnotationCommand.js",
+				"ve/ColorAnnotationTool.js",
+				"ve/dm/bs.dm.ColorAnnotation.js",
+				"ve/ce/bs.ce.ColorAnnotation.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.core",
+				"ext.oOJSPlus.widgets.colorPicker"
+			],
+			"messages": [
+				"bs-visualeditorconnector-text-style-tool-color-label",
+				"bs-visualeditorconnector-color-annotation-desc"
+			]
+		},
+		"ext.bluespice.visualEditorConnector.colors": {
+			"styles": [
+				"bluespice.visualEditorConnector.colors.less"
+			]
+		},
+		"bs.vec.ui.InternalUrlHTMLStringTransferHandler": {
+			"scripts": [
+				"bs.vec/ui/datatransferhandlers/bs.vec.ui.InternalUrlHTMLStringTransferHandler.js"
+			],
+			"dependencies": [
+				"ext.visualEditor.mwcore"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpiceVisualEditorConnector/resources"
+	},
+	"config_prefix": "bsg",
+	"config": {
+		"VisualEditorConnectorEnableVisualEditor": {
+			"value": true,
+			"descriptionmsg": "bs-visualeditorconnector-enable-visualeditor",
+			"public": true
+		},
+		"VisualEditorConnectorUploadDialogType": {
+			"value": "original",
+			"descriptionmsg": "bs-visualeditorconnector-upload-dialog-type",
+			"public": true
+		},
+		"VisualEditorConnectorSimpleSaveProcess": {
+			"value": true,
+			"descriptionmsg": "bs-visualeditorconnector-simple-save-process",
+			"public": true
+		},
+		"VisualEditorConnectorTableStyleRegistry": {
+			"value": {
+				"Standard":"wikitable",
+				"Content":"contenttable",
+				"Content (black)":"contenttable-black",
+				"Content (blue)":"contenttable-blue",
+				"Content (darkblue)":"contenttable-darkblue",
+				"Cusco Sky":"cuscosky",
+				"Casablanca":"casablanca",
+				"Greyscale":"greyscale",
+				"Greyscale (narrow)":"greyscale-narrow"
+			}
+		},
+		"VisualEditorConnectorColorPickerColors": {
+			"@note": "Usage described in docs/custom_text_colors.md",
+			"value": [
+				{ "class": "col-white", "name": "White" },
+				{ "class": "col-blue-light", "name": "Light Blue" },
+				{ "class": "col-blue", "name": "Blue" },
+				{ "class": "col-blue-dark", "name": "Dark Blue" },
+				{ "class": "col-blue-navy", "name": "Navy Blue" },
+				{ "class": "col-orange", "name": "Orange" },
+				{ "class": "col-turquoise", "name": "Turquoise" },
+				{ "class": "col-green", "name": "Green" },
+				{ "class": "col-purple", "name": "Purple" },
+				{ "class": "col-red", "name": "Red" },
+				{ "class": "col-grey-light", "name": "Light Grey" },
+				{ "class": "col-grey-medium", "name": "Medium Grey" },
+				{ "class": "col-grey", "name": "Grey" },
+				{ "class": "col-grey-dark", "name": "Dark Grey" },
+				{ "class": "col-black", "name": "Black" }
+			]
+		},
+		"VisualEditorConnectorColorPickerColorsBackground": {
+			"@note": "Usage described in docs/custom_text_colors.md",
+			"value": [
+				{ "class": "col-white-bg", "name": "White" },
+				{ "class": "col-blue-light-bg", "name": "Light Blue" },
+				{ "class": "col-blue-bg", "name": "Blue" },
+				{ "class": "col-blue-dark-bg", "name": "Dark Blue" },
+				{ "class": "col-blue-navy-bg", "name": "Navy Blue" },
+				{ "class": "col-orange-bg", "name": "Orange" },
+				{ "class": "col-turquoise-bg", "name": "Turquoise" },
+				{ "class": "col-green-bg", "name": "Green" },
+				{ "class": "col-purple-bg", "name": "Purple" },
+				{ "class": "col-red-bg", "name": "Red" },
+				{ "class": "col-grey-light-bg", "name": "Light Grey" },
+				{ "class": "col-grey-medium-bg", "name": "Medium Grey" },
+				{ "class": "col-grey-bg", "name": "Grey" },
+				{ "class": "col-grey-dark-bg", "name": "Dark Grey" },
+				{ "class": "col-black-bg", "name": "Black" }
+			]
+		}
+	},
+	"Hooks": {
+		"APIAfterExecute": "\\BlueSpice\\VisualEditorConnector\\Hook\\APIAfterExecute\\WrapPreloadText::callback",
+		"BSSocialModuleDepths": "\\BlueSpice\\VisualEditorConnector\\Hook\\BSSocialModuleDepths\\AddVECModules::callback",
+		"BSPageTemplatesModifyTargetUrl": "\\BlueSpice\\VisualEditorConnector\\Hook\\BSPageTemplatesModifyTargetUrl\\UseVisualEditor::callback",
+		"BeforePageDisplay": [
+			"\\BlueSpice\\VisualEditorConnector\\Hook\\BeforePageDisplay\\AddModules::callback",
+			"\\BlueSpice\\VisualEditorConnector\\Hook\\BeforePageDisplay\\AddSaveProcessOverride::callback",
+			"\\BlueSpice\\VisualEditorConnector\\Hook\\BeforePageDisplay\\AddStaticStyles::callback"
+		],
+		"NamespaceManager::getMetaFields": "\\BlueSpice\\VisualEditorConnector\\Hook\\NamespaceManagerGetMetaFields\\RegisterMetaFields::callback",
+		"BSApiNamespaceStoreMakeData": "\\BlueSpice\\VisualEditorConnector\\Hook\\BSApiNamespaceStoreMakeData\\AddData::callback",
+		"NamespaceManager::editNamespace": "\\BlueSpice\\VisualEditorConnector\\Hook\\NamespaceManagerEditNamespace\\SetVisualEditorValues::callback",
+		"NamespaceManager::writeNamespaceConfiguration": [
+			"\\BlueSpice\\VisualEditorConnector\\Hook\\NamespaceManagerWriteNamespaceConfiguration\\WriteToConfiguration::callback"
+		],
+		"BSUEModulePDFBeforeAddingStyleBlocks": "\\BlueSpice\\VisualEditorConnector\\Hook\\BSUEModulePDFBeforeAddingStyleBlock\\AddColors::callback"
+	},
+	"manifest_version": 2
+}

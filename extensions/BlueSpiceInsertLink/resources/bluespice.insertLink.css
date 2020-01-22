@@ -1,0 +1,27 @@
+a#bs-editbutton-insertlink {
+	/*@embed*/
+	background-image: url(images/button_insert-link.png);
+}
+
+i.mce-i-link {
+	/*@embed*/
+	background-image: url(images/button_insert-link-16px.png);
+}
+
+i.mce-i-unlink {
+	/*@embed*/
+	background-image: url(images/button_insert-unlink-16px.png);
+}
+
+i.mce-i-link:before,
+i.mce-i-unlink:before{
+	content: "";
+}
+
+.bs-insertlink-internal-link-inspector-layout .mw-widget-titleWidget {
+	width: 260px
+}
+
+.bs-insertlink-internal-link-inspector-layout .oo-ui-actionFieldLayout-button {
+	vertical-align: top;
+}

@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"bs-visualeditorconnector-enable-visualeditor": "Attiva VisualEditor per estensioni BlueSpice",
+	"bs-visualeditorconnector-cancel-edit": "Annulla modifica",
+	"bs-visualeditor-nsm-label": "Visual editor",
+	"bs-visualeditorconnector-inspector-tab-common-name": "Comuni",
+	"bs-visualeditorconnector-inspector-tab-advanced-name": "Avanzate",
+	"apihelp-bs-vec-transformtowikitext-description": "Trasforma HTML VisualEditor in WikiTesto",
+	"apihelp-bs-vec-transformtowikitext-summary": "Trasforma HTML VisualEditor in WikiTesto",
+	"apihelp-bs-vec-transformtohtml-description": "Trasforma WikiTesto in HTML VisualEditor",
+	"apihelp-bs-vec-transformtohtml-summary": "Trasforma WikiTesto in HTML VisualEditor",
+	"apihelp-bs-vec-transformtowikitext-param-html": "HTML VisualEditor che deve essere trasformato in WikiTesto",
+	"apihelp-bs-vec-transformtohtml-param-wikitext": "WikiTesto che deve essere trasformato in HTML VisualEditor",
+	"bs-visualeditorconnector-simple-save-process": "Variabile di configurazione per usare un processo di salvataggio semplificato",
+	"bs-visualeditorconnector-upload-type-original": "Originale",
+	"bs-visualeditorconnector-upload-type-simple": "Semplice",
+	"bs-visualeditorconnector-dialog-media-link": "Collega questo file",
+	"bs-visualeditorconnector-dialog-media-embed": "Incorpora questo file",
+	"bs-vec-table-inspector-column": "Colonna",
+	"bs-vec-table-inspector-row": "Riga",
+	"bs-vec-table-inspector-cell": "Cella",
+	"bs-vec-table-style-column-width": "Larghezza colonna",
+	"bs-vec-contextitem-row-duplicate": "Duplica riga",
+	"bs-vec-contextitem-table-additional-options": "Opzioni aggiuntive",
+	"bs-vec-dialog-table-create-number-of-rows": "Numero di righe",
+	"bs-vec-dialog-table-create-number-of-columns": "Numero di colonne",
+	"bs-vec-dialog-action-done": "Fatto",
+	"bs-vec-dialog-action-safe": "Annulla",
+	"bs-vec-dialog-create-table-title": "Inserisci tabella",
+	"bs-vec-widget-text-direction-tooltip": "Testo verticale",
+	"bs-visualeditor-linkcontext-label-change": "Modifica etichetta",
+	"bs-visualeditor-linkcontext-label-label": "Etichetta"
+}

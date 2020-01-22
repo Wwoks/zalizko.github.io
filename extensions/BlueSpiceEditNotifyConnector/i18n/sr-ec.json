@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Zoranzoki21"
+		]
+	},
+	"bluespiceeditnotifyconnector-desc": "Проширење EditNotify са корисничким опцијама",
+	"bluespiceeditnotifyconnector-action-message": "Креирана или измењена обавештења за одабране именске просторе ће бити послата.",
+	"prefs-categories": "Обавештења о догађајима са категоријама",
+	"prefs-namespace-notifications": "Обавештења о догађајима са именским просторијама",
+	"prefs-category-notifications": "Обавештења на категоријама"
+}

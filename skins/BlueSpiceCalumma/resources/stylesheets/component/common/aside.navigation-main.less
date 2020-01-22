@@ -1,0 +1,187 @@
+.navigation-main {
+	left: 0;
+	min-height: 100%;
+	display: block;
+	position: fixed;
+	background-color: @navigation-bg-color;
+	z-index: 12;
+	overflow: hidden;
+
+
+	.separator {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid @navigation-color;
+	}
+
+	#bs-sitenavtabs {
+		div.tab-content {
+			position: relative;
+			overflow: hidden;
+			color: @navigation-color;
+			-webkit-user-select: none; /* Safari 3.1+ */
+			-moz-user-select: none; /* Firefox 2+ */
+			-ms-user-select: none; /* IE 10+ */
+			user-select: none; /* Standard syntax */
+			& > div {
+				position: relative;
+				top:0;
+			}
+
+			a {
+				white-space: nowrap;
+			}
+
+			a[data-graphicallist-callback] {
+				display: block;
+				width: 100%;
+			}
+
+			a.dynamic-graphical-list-visible[data-flyout-title] .bs-chevron::before {
+				content: "\e922";
+				font-family: "entypo";
+				font-style: normal;
+				float: right;
+			}
+
+			a[data-flyout-title] .bs-chevron::before {
+				content: "\e923";
+				font-family: "entypo";
+				font-style: normal;
+				float: right;
+			}
+
+			a:focus,
+			a:visited {
+				color: @navigation-color;
+			}
+
+			&:hover {
+				overflow-y: auto;
+			}
+		}
+	}
+
+	.list-group-item.dynamic-graphical-list-visible {
+		background-color: @navigation-graphicallist-bg-color;
+	}
+
+	.nav::before,
+	.nav::after {
+		display: none;
+	}
+
+	.nav.nav-pills{
+		height: @navigation-tabs-height;
+		display: flex;
+		justify-content: space-between;
+		background-color: @navigation-tabs-bg-color;
+		margin-bottom: 10px;
+
+		li{
+			height: @navigation-tabs-height;
+
+			a{
+				background-color: @navigation-tab-bg-color;
+				color: @navigation-tab-color;
+				height: 100%;
+				line-height: 40px;
+			}
+			&.active a{
+				background-color: @navigation-tab-bg-color-active;
+				color: @navigation-tab-color-active;
+			}
+			a:hover{
+				background-color: @navigation-tab-bg-color-hover;
+				color: @navigation-tab-color-hover;
+			}
+		}
+	}
+
+	.tab-pane.active {
+		.bs-calumma-sidebar-edit-link {
+			text-align: right;
+			padding: 0 16px;
+			display: none;
+
+			span {
+				color: @navigation-tab-color;
+			}
+
+			&:hover {
+				background-color: transparent;
+				text-decoration: none;
+
+				span {
+					background-color: transparent;
+					color: @navigation-color-hover;
+				}
+			}
+		}
+
+		&:hover .bs-calumma-sidebar-edit-link {
+			display: block;
+		}
+	}
+
+	ul {
+		padding: 0;
+		list-style: none;
+	}
+
+	h4 {
+		text-align: center;
+		font-size: 20px;
+		font-weight: @font-weight-regular;
+	}
+
+	h5 {
+		text-align: center;
+		font-size: 12px;
+	}
+
+	a,
+	a span {
+		border-radius: 0;
+		color: @navigation-color;
+		width: 100%;
+		height: 32px;
+		line-height: 12px;
+	}
+
+	a:hover,
+	a:hover span {
+		background-color: transparent;
+		color: @navigation-color-hover;
+	}
+}
+
+
+#bs-sitenav-navigation {
+	#bs-mobile-user-container .panel-heading .bs-panel-title,
+	#bs-mediawiki-sidebar .panel-heading .bs-panel-title {
+		display: none;
+	}
+
+	#bs-mobile-user-container {
+		display: none;
+	}
+
+	#bs-mediawiki-sidebar {
+		.panel-heading {
+			display: block;
+		}
+
+		& > .panel-heading {
+			display: none;
+		}
+	}
+}
+
+#bs-globalactions {
+	a.list-group-item span {
+		display: inline;
+		font-family: @wrapper-font-family;
+		font-weight: @font-weight-regular;
+	}
+}

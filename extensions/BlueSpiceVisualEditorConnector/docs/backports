@@ -1,0 +1,8 @@
+This extension contains backports. Remove when MediaWiki is updated to the corresponding versions.
+
+From MediaWiki 1.33
+* ressources/bs.vec/ce/Surface.js
+* ressources/bs.vec/styles/LinkContextItem.css
+* ressources/bs.vec/ui/AnnotationContextItem.js
+* ressources/bs.vec/ui/LinkContextItem.js
+* ressources/bs.vec/ui/MWInternalLinkContextItem.js

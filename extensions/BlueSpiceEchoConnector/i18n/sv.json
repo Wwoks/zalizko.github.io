@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix",
+			"Mjälten"
+		]
+	},
+	"bs-echoconnector-extension-description": "Ansluter BlueSpice med Echo",
+	"echo-category-title-bs-admin-cat": "Administratördåd utfört",
+	"echo-category-title-bs-page-actions-cat": "Handling på bevakade sida"
+}

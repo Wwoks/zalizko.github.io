@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz",
+			"Silvonen"
+		]
+	},
+	"bs-insertmagic-servername": "Domain-nimi.",
+	"bs-insertmagic-label-desc": "Kuvaus",
+	"bs-insertmagic-currentversion": "Wikin MediaWiki-versio.",
+	"bs-insertmagic-label-see-also": "Katso myös"
+}

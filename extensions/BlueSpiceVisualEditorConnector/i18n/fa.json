@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amirsara"
+		]
+	},
+	"bs-visualeditorconnector-text-style-tool-color-label": "رنگ متن",
+	"bs-vec-table-inspector-cell": "سلول",
+	"bs-vec-dialog-action-done": "انجام شد",
+	"bs-vec-dialog-action-safe": "لغو"
+}

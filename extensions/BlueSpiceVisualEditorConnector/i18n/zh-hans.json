@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"A Chinese Wikipedian",
+			"佛壁灯",
+			"科劳",
+			"神樂坂秀吉",
+			"Viztor",
+			"予弦",
+			"A Retired User"
+		]
+	},
+	"bs-visualeditorconnector-cancel-edit": "取消编辑",
+	"bs-visualeditor-nsm-label": "可视化编辑器",
+	"bs-visualeditorconnector-inspector-tab-common-name": "普通",
+	"bs-visualeditorconnector-inspector-tab-advanced-name": "高级",
+	"bs-visualeditorconnector-desc": "将 VisualEditor 与 BlueSpice 相连",
+	"bs-visualeditorconnector-enable-visualeditor": "为 BlueSpice 扩展启用 VisualEditor",
+	"bs-visualeditorconnector-simple-save-process": "用于简化保存流程的配置变量",
+	"bs-visualeditorconnector-upload-type-simple": "简单",
+	"bs-visualeditorconnector-ve-style-option-description": "选择表格样式",
+	"bs-visualeditorconnector-ve-style-option": "表格样式",
+	"apihelp-bs-vec-transformtowikitext-description": "将 VisualEditor HTML 转化为 Wiki 文本",
+	"apihelp-bs-vec-transformtowikitext-summary": "将 VisualEditor HTML 转化为 Wiki 文本",
+	"apihelp-bs-vec-transformtohtml-description": "将 Wiki 文本 转化为 VisualEditor HTML",
+	"apihelp-bs-vec-transformtohtml-summary": "将 Wiki 文本 转化为 VisualEditor HTML",
+	"apihelp-bs-vec-transformtowikitext-param-html": "应被转化为 Wiki 文本的 VisualEditor HTML",
+	"apihelp-bs-vec-transformtohtml-param-wikitext": "应被转化为 Wiki 文本的 VisualEditor HTML",
+	"apihelp-bs-vec-restbase-mock-description": "提供 VisualEditor 的模拟 RESTBase 调用",
+	"apihelp-bs-vec-restbase-mock-summary": "提供 VisualEditor 的模拟 RESTBase 调用",
+	"apihelp-bs-vec-restbase-mock-param-path": "要模拟的 RESTBase 路径",
+	"bs-visualeditorconnector-upload-dialog-type": "MediaDialog 的文件上传工作流",
+	"bs-visualeditorconnector-text-style-tool-color-label": "文本颜色",
+	"bs-vec-table-inspector-column": "列",
+	"bs-vec-table-inspector-row": "行",
+	"bs-vec-table-inspector-cell": "单元格",
+	"bs-vec-table-style-column-width": "列宽",
+	"bs-vec-table-style-row-height": "行高（像素）",
+	"bs-vec-dialog-action-done": "完成",
+	"bs-vec-dialog-action-safe": "取消",
+	"bs-vec-dialog-media-change-file": "改变文件"
+}

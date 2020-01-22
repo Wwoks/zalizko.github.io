@@ -1,0 +1,206 @@
+/* open */
+.calumma-toggle-button.bs-custom-menu-header-button {
+	position: fixed;
+	z-index: 25;
+	cursor: pointer;
+	color: @custom-menu-header-color;
+	background-color: @custom-menu-header-bg-color;
+	border-radius: 0 0 0.31rem 0.31rem;
+
+	i::before {
+		content: "\e92c";
+		font-family: "entypo";
+		font-style: normal;
+		padding-left: 0.187rem;
+		padding-right: 0.187rem;
+	}
+
+	&:hover,
+	&:focus {
+		color: @custom-menu-header-color-hover;
+		text-decoration: none;
+	}
+}
+
+.bs-custom-menu-header-container {
+	z-index: 21;
+	background-color: @custom-menu-header-bg-color;
+	.bs-custom-menu.header {
+		position: relative;
+		display: flex;
+		height: 100%;
+		margin-bottom: 0;
+		padding: 0;
+		list-style: none;
+
+		& > li {
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				color: @custom-menu-header-color-hover;
+				background-color: @custom-menu-header-bg-color-hover;
+			}
+		}
+
+		a {
+			color: @custom-menu-header-color;
+			display: block;
+
+			& > span {
+				float: left;
+				height: @custom-menu-top-height;
+				line-height: @custom-menu-top-height;
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: @custom-menu-header-color-hover;
+				background-color: @custom-menu-header-bg-color-hover;
+			}
+
+			&:focus {
+				text-decoration: none;
+				background-color: transparent;
+			}
+		}
+
+		.dropdown-submenu {
+			position: relative;
+
+			.dropdown-menu {
+				top: 0;
+				left: 100%;
+			}
+		}
+
+		li:not(.level-1) {
+			a {
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+		}
+
+		li.dropdown,
+		li.dropdown-submenu,
+		li.contains-children {
+			&.level-1 {
+				& > a > i::after {
+					content: "\e921";
+					font-family: "entypo";
+					font-style: normal;
+					height: @custom-menu-top-height;
+					line-height: @custom-menu-top-height;
+					margin-left: 0.31rem;
+				}
+				.dropdown-menu,
+				.child-menu {
+					padding: 0;
+					list-style: none;
+					background-color: @custom-menu-header-bg-color;
+
+					&.level-2 {
+						top: calc(~"@{custom-menu-top-height} + 0.8em");
+						&::before {
+							font-size: 3em;
+							font-family: 'fontawesome';
+							content: "\f0d8";
+							position: absolute;
+							top: -0.9em;
+							left:  1.25rem;
+							color:  @custom-menu-header-bg-color;
+							height: 1em;
+							z-index: -1;
+						}
+					}
+
+					&:not(.level-2) {
+						left: calc(~"100% + 0.75rem");
+						&::before {
+							font-size: 3em;
+							font-family: 'fontawesome';
+							content: "\f0d9";
+							position: absolute;
+							top: -0.625rem;
+							left: -0.75rem;
+							color:  @custom-menu-header-bg-color;
+							height: 1em;
+							z-index: -1;
+						}
+					}
+				}
+			}
+			&:not(.level-1) {
+				& > a > span {
+					max-width: 85%;
+					overflow-x: hidden;
+					text-overflow: ellipsis;
+				}
+
+				& > a > i::after {
+					content: "\e923";
+					font-family: "entypo";
+					font-style: normal;
+					height: @custom-menu-top-height;
+					line-height: @custom-menu-top-height;
+				}
+			}
+
+			&.open {
+				color: @custom-menu-header-color-hover;
+				background-color: @custom-menu-header-bg-color-hover;
+			}
+		}
+	}
+
+	.bs-edit-custom-menu-link {
+		display: block;
+		visibility: hidden;
+		position: fixed;
+		top: 0;
+		right:  1.25rem;
+		max-width: 8.125rem;
+		height: @custom-menu-top-height;
+		overflow: hidden;
+		line-height: @custom-menu-top-height;
+		text-overflow: ellipsis;
+		color: @custom-menu-header-color;
+
+		&:hover {
+			text-decoration: none;
+			color: @custom-menu-header-color-hover;
+		}
+
+		.label {
+			display: block;
+			margin-top: 0.75rem;
+		}
+	}
+
+	&:hover .bs-edit-custom-menu-link {
+		visibility: visible;
+	}
+}
+
+
+/* collapsed */
+body.mediawiki:not( .bs-cusom-menu-active ),
+body.mediawiki.bs-custom-menu-header-container-collapse {
+	.calumma-toggle-button.bs-custom-menu-header-button {
+		i::before {
+			content: "\e921";
+		}
+
+		&:hover {
+			color: @custom-menu-header-color-hover;
+			text-decoration: none;
+		}
+		&:focus {
+			color: @custom-menu-header-color-hover;
+			text-decoration: none;
+		}
+	}
+
+	.bs-custom-menu-header-container {
+		display: none;
+	}
+}

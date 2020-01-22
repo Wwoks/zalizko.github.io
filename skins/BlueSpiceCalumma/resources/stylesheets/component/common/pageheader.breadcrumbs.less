@@ -1,0 +1,122 @@
+.bs-page-breadcrumbs {
+	a.btn {
+		border: none;
+		padding: 0;
+		line-height: 1.4rem;
+	}
+	.dropdown {
+		& > a {
+			padding: 0;
+			.mixin-link-title-color(
+				@link-color,
+				@link-color-hover,
+				@link-color-new,
+				@link-color-new-hover
+			);
+		}
+		.btn {
+			border: none;
+			vertical-align: middle;
+			float: none;
+		}
+		.btn:active,
+		.btn.active {
+				box-shadow: none;
+		}
+		&.open {
+			.dropdown-toggle {
+				box-shadow: none;
+			}
+
+			.dropdown-toggle::before {
+				font-family: 'fontawesome';
+				content: "\f0d7";
+			}
+		}
+
+		& > a.dropdown-toggle {
+			margin-left: 0.3em;
+			margin-right: 0.3em;
+			padding-right: 0;
+			padding-left: 0;
+			width: 1rem;
+
+			.mixin-link-color(
+					@page-header-breadcrumbs-dropdown-color,
+					@page-header-breadcrumbs-dropdown-color
+				);
+
+			&::before {
+				font-family: 'fontawesome';
+				content: "\f0da";
+				margin-left: 0.1875rem;
+				margin-right: 0.1875rem;
+			}
+		}
+
+		.dropdown-menu {
+			.mixin-box-shadow-secondary();
+			.mixin-dropdown-menu(
+					@page-header-breadcrumbs-dropdown-color,
+					@page-header-breadcrumbs-dropdown-bg-color,
+					@page-header-breadcrumbs-dropdown-color-hover,
+					@page-header-breadcrumbs-dropdown-bg-color-hover
+				);
+			.mixin-dropdown-menu-title-new(
+					@link-color-new,
+					@link-color-new-hover,
+					@page-header-breadcrumbs-dropdown-bg-color-hover
+				);
+			width: auto;
+			margin-top: 0.8rem;
+			margin-left: calc(~"100% - 2rem");
+			max-height: 25rem;
+			overflow: auto;
+			-webkit-overflow-scrolling: touch;
+			-webkit-user-select: none; /* Safari 3.1+ */
+			-moz-user-select: none; /* Firefox 2+ */
+			-ms-user-select: none; /* IE 10+ */
+			user-select: none; /* Standard syntax */
+
+			ul {
+				margin-right: 10px;
+			}
+
+			&::before {
+				display: none;
+				color: @page-header-breadcrumbs-dropdown-bg-color-hover;
+				margin-top: -1px;
+				left: 1rem;
+			}
+		}
+	}
+	.dropdown.open {
+		&::before {
+				font-size: 3em;
+				font-family: 'fontawesome';
+				content: "\f0d8";
+				color: @page-header-breadcrumbs-dropdown-bg-color-hover;
+				position: absolute;
+				bottom: -2.2rem;
+				right: 0rem;
+			}
+	}
+}
+
+#bs-breadcrumb-rootnode {
+	display: inline-block;
+	margin-right: 0.5rem;
+	vertical-align: middle;
+	a {
+		.mixin-link-title-color(
+			@link-color,
+			@link-color-hover,
+			@link-color-new,
+			@link-color-new-hover
+		);
+
+		&::after {
+			content: ":";
+		}
+	}
+}

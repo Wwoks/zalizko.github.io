@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"MIKHEIL",
+			"David1010"
+		]
+	},
+	"bs-usermanager-no-self-desysop": "თქვენ არ შეგიძლიათ საკუთარი ადმინისტრატორის სტატუსის მოხსნა.",
+	"bs-usermanager-endisable": "ჩართვა/გამორთვა"
+}

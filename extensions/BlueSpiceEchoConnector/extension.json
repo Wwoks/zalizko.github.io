@@ -1,0 +1,98 @@
+{
+	"name": "BlueSpiceEchoConnector",
+	"license-name": "GPL-3.0-only",
+	"version": "3.1.2",
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:BlueSpiceEchoConnector",
+	"author": [
+		"Sebastian Ulbricht",
+		"Robert Vogel",
+		"Dejan Savuljesku"
+	],
+	"descriptionmsg": "bs-echoconnector-extension-description",
+	"type": "bluespice",
+	"requires": {
+		"MediaWiki": "~1.31",
+		"extensions": {
+			"BlueSpiceFoundation": "~3.1",
+			"Echo": "*"
+		}
+	},
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"NotificationRegistrationFunctions": [
+				"\\BlueSpice\\EchoConnector\\Extension::registerNotifications"
+			],
+			"RunJobsTriggerHandlerRegistry": {
+				"bs-echoconnector-send-digest": "BlueSpice\\EchoConnector\\RunJobsTriggerHandler\\SendDigest::factory"
+			}
+		},
+		"BlueSpiceEchoConnector": {
+			"ParamParsers": {},
+			"NotificationIcons": {
+				"delete": {
+					"path": "BlueSpiceEchoConnector/resources/images/delete.png"
+				}
+			}
+		}
+	},
+	"MessagesDirs": {
+		"BlueSpiceEchoConnector": [
+			"i18n",
+			"i18n/notifications"
+		]
+	},
+	"callback": "\\BlueSpice\\EchoConnector\\Extension::onRegistration",
+	"Hooks": {
+		"ArticleDeleteComplete": [
+			"\\BlueSpice\\EchoConnector\\Hook\\ArticleDeleteComplete\\NotifyUsers::callback"
+		],
+		"TitleMoveComplete": [
+			"\\BlueSpice\\EchoConnector\\Hook\\TitleMoveComplete\\NotifyUsers::callback"
+		],
+		"PageContentSaveComplete": [
+			"\\BlueSpice\\EchoConnector\\Hook\\PageContentSaveComplete\\NotifyUsers::callback"
+		],
+		"BSUserManagerAfterAddUser": [
+			"\\BlueSpice\\EchoConnector\\Hook\\BSUserManagerAfterAddUser\\NotifyUsers::callback"
+		],
+		"EchoGetNotificationTypes": [
+			"\\BlueSpice\\EchoConnector\\Hook\\EchoGetNotificationTypes\\GetNotificationTypesForEvent::callback"
+		],
+		"EchoGetBundleRules": [
+			"\\BlueSpice\\EchoConnector\\Hook\\EchoGetBundleRules\\GetBundleRules::callback"
+		],
+		"LocalUserCreated": [
+			"\\BlueSpice\\EchoConnector\\Hook\\LocalUserCreated\\NotifyUsers::callback"
+		]
+	},
+	"config_prefix": "bsg",
+	"config": {
+		"EchoHtmlMailTemplatePath": {
+			"value": "/templates",
+			"path": true
+		},
+		"EchoHtmlMailTemplateNames": {
+			"value": {
+				"single": "SingleMail",
+				"digest": "Digest",
+				"primary_link": "PrimaryLink",
+				"secondary_link": "SecondaryLink",
+				"digest_list": "DigestList"
+			}
+		},
+		"UseJobQueueForNotifications": {
+			"value": false
+		},
+		"ForceJobQueueForLargeAudienceThreshold": {
+			"value": 499
+		}
+	},
+	"JobClasses": {
+		"sendNotification": "BlueSpice\\EchoConnector\\Job\\SendNotification"
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\EchoConnector\\": "src/"
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

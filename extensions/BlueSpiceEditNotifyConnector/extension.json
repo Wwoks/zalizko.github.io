@@ -1,0 +1,48 @@
+{
+	"name": "BlueSpiceEditNotifyConnector",
+	"license-name": "GPL-3.0-only",
+	"version": "3.1.2",
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:BlueSpiceEditNotifyConnector",
+	"descriptionmsg": "bluespiceeditnotifyconnector-desc",
+	"author": [
+		"Leonid Verhovskij"
+	],
+	"type": "bluespice",
+	"requires": {
+		"MediaWiki": "~1.31",
+		"extensions": {
+			"BlueSpiceFoundation": "~3.1",
+			"BlueSpiceEchoConnector": "~3.1",
+			"EditNotify": ">= 1.0.0"
+		}
+	},
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceEditNotifyConnector": {
+					"className": "\\BlueSpice\\EditNotifyConnector\\Extension",
+					"extPath": "/BlueSpiceEditNotifyConnector",
+					"package": "BlueSpice Pro"
+				}
+			}
+		}
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\EditNotifyConnector\\": "src/"
+	},
+	"AutoloadClasses": {
+		"BlueSpiceEditNotifyConnector": "includes/BlueSpiceEditNotifyConnector.php"
+	},
+	"Hooks": {
+		"GetPreferences": "BlueSpiceEditNotifyConnector::onGetPreferences",
+		"LoadExtensionSchemaUpdates": "BlueSpiceEditNotifyConnector::onLoadExtensionSchemaUpdates",
+		"UserSaveOptions": "BlueSpiceEditNotifyConnector::onUserSaveOptions"
+	},
+	"MessagesDirs": {
+		"BlueSpiceEditNotifyConnector": [
+			"i18n"
+		]
+	},
+	"callback":"BlueSpiceEditNotifyConnector::onRegistry",
+	"manifest_version": 2
+}

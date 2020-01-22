@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joedalton",
+			"Saederup92"
+		]
+	},
+	"bs-setting-path-extension": "Udvidelse",
+	"bs-setting-path-package": "Pakke",
+	"bs-setting-path-system": "System",
+	"bs-setting-path-dataanalysis": "Dataanalyse",
+	"bs-setting-path-administration": "Administration"
+}

@@ -1,0 +1,281 @@
+{
+	"name": "BlueSpiceCalumma",
+	"version": "3.1.2",
+	"license-name": "GPL-3.0-only",
+	"author": [
+		"Daniel Vogel <d.vogel@hallowelt.com>",
+		"Robert Vogel <vogel@hallowelt.com>",
+		"Radovan Kubani <kubani@hallowelt.com"
+	],
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:Calumma",
+	"descriptionmsg": "bluespicecalumma-desc",
+	"namemsg": "bluespicecalumma-skin",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": "~1.31",
+		"extensions": {
+			"BlueSpiceFoundation": "~3.1"
+		}
+	},
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"RendererRegistry": {
+				"panel": "\\BlueSpice\\Calumma\\Renderer\\Panel::factory",
+				"calummacustommenu": "\\BlueSpice\\Calumma\\Renderer\\CustomMenu\\Menu::factory",
+				"calummacustommenuitem": "\\BlueSpice\\Calumma\\Renderer\\CustomMenu\\Menu\\Item::factory",
+				"pageheader-breadcrumb": "\\BlueSpice\\Calumma\\Renderer\\PageHeader\\BreadCrumb::factory",
+				"pageheader-context": "\\BlueSpice\\Calumma\\Renderer\\PageHeader\\Context::factory",
+				"@note": "The category renderer is hard coded as a fallback in PageHeader::getCategories, so it can be overwritten by extensions",
+				"@pageheader-category": "\\BlueSpice\\Calumma\\Renderer\\PageHeader\\Category::factory",
+				"@pageheader-lastedit": "\\BlueSpice\\Calumma\\Renderer\\PageHeader\\LastEdit::factory",
+				"pageheader-editbutton": "\\BlueSpice\\Calumma\\Renderer\\PageHeader\\EditButton::factory",
+				"pageheader-pageinfo": "\\BlueSpice\\Calumma\\Renderer\\PageHeader\\PageInfo::factory"
+			},
+			"LessVarsRegistry": {
+				"bs-color-primary": "#3e5389",
+				"bs-color-secondary": "#ffae00",
+				"bs-color-tertiary": "#b73a3a",
+				"bs-color-neutral": "#929292",
+				"bs-color-neutral2": "#ABABAB",
+				"bs-color-neutral3": "#C4C4C4",
+				"bs-color-neutral4": "#787878",
+				"bs-color-progressive": "#347bff",
+				"bs-color-contructive": "#00af89",
+				"bs-color-destructive": "#d11d13",
+				"bs-color-success": "#c5e8c9",
+				"bs-color-warning": "#f7e1b2",
+				"bs-color-error": "#f0c6ef",
+				"bs-color-info": "#bddfdf",
+				"bs-color-after-content": "darken(@bs-color-neutral, 37.2549)",
+				"bs-body-background": "@bs-background-primary",
+				"bs-content-background": "@bs-background-neutral",
+				"bs-content-toc-background": "@bs-background-primary",
+				"bs-seperator-line-color": "#e9e9e9"
+			},
+			"AlertProviderRegistry": {
+				"oldversion": "\\BlueSpice\\Calumma\\AlertProvider\\OldVersion::factory"
+			},
+			"AssocLinksProviderRegistry": {
+				"history-view": "\\BlueSpice\\Calumma\\AssocLinksProvider\\HistoryView::factory",
+				"existing-siblings": "\\BlueSpice\\Calumma\\AssocLinksProvider\\ExistingSiblings::factory",
+				"mapped-siblings": "\\BlueSpice\\Calumma\\AssocLinksProvider\\MappedSiblings::factory",
+				"custom-callback": "\\BlueSpice\\Calumma\\AssocLinksProvider\\CustomCallback::factory",
+				"rootpage-sibling": "\\BlueSpice\\Calumma\\AssocLinksProvider\\RootPageSibling::factory"
+			},
+			"BreadcrumbRootNodeRegistry": {
+				"namespace-mainpage": "\\BlueSpice\\Calumma\\BreadcrumbRootNode\\NamespaceMainPage::factory",
+				"namespace-portalpage": "\\BlueSpice\\Calumma\\BreadcrumbRootNode\\NamespacePortalPage::factory",
+				"special-allpages": "\\BlueSpice\\Calumma\\BreadcrumbRootNode\\SpecialAllPages::factory",
+				"special-specialpages": "\\BlueSpice\\Calumma\\BreadcrumbRootNode\\SpecialSpecialPages::factory"
+			}
+		},
+		"BlueSpiceCustomMenu": {
+			"Registry": {
+				"header": "\\BlueSpice\\Calumma\\CustomMenu\\Header::getInstance"
+			}
+		}
+	},
+	"ValidSkinNames": {
+		"bluespicecalumma": "BlueSpiceCalumma"
+	},
+	"MessagesDirs": {
+		"BlueSpiceCalumma": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SkinBlueSpiceCalumma": "SkinBlueSpiceCalumma.php"
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\Calumma\\": "src/",
+		"BlueSpice\\Calumma\\Tests\\": "tests/phpunit/"
+	},
+	"ResourceModules": {
+		"skin.bluespicecalumma.styles": {
+			"styles": {
+				"stylesheets/fixes/mobile.less": {},
+				"stylesheets/fixes/desktop.less": {},
+				"stylesheets/fixes/mobile.specialpages.less": {},
+				"stylesheets/fixes/desktop.specialpages.less": {},
+				"stylesheets/fixes/IEFixes.css": {},
+				"stylesheets/icons.less": {},
+				"stylesheets/common.less": {},
+				"stylesheets/mobile.less": { "media": "all and ( max-width: 720px )" },
+				"stylesheets/tablet.less": { "media": "all and ( min-width: 721px ) and ( max-width: 1000px )" },
+				"stylesheets/desktop.less": { "media": "all and ( min-width: 1001px )" },
+				"stylesheets/desktop_sm.less": { "media": "all and ( min-width: 1001px ) and ( max-width: 1200px )" },
+				"stylesheets/desktop_md.less": { "media": "all and ( min-width: 1201px ) and ( max-width: 1699px )" },
+				"stylesheets/desktop_lg.less": { "media": "all and ( min-width: 1700px )" },
+				"stylesheets/print.less": { "media": "print" },
+				"stylesheets/content/mobile/content.less": { "media": "all and ( max-width: 1001px )" }
+			},
+			"class": "\\BlueSpice\\ResourceModule\\LessVars"
+		},
+		"skin.bluespicecalumma.scripts": {
+			"scripts": [
+				"js/Breadcrumb.js",
+				"js/SidebarToggle.js",
+				"js/skin.bluespicecalumma.pageinfo.QmPanel.js",
+				"js/ToggleButton.js",
+				"js/FullScreenButton.js",
+				"js/skin.bluespicecalumma.scrollToTop.js",
+				"js/scrollToJumpmark.js",
+				"js/mobile.content.js",
+				"js/skin.bluespicecalumma.featuredActions.js",
+				"js/skin.bluespicecalumma.customMenu.header.js"
+			],
+			"dependencies": [
+				"mediawiki.cookie",
+				"mediawiki.jqueryMsg",
+				"ext.bluespice",
+				"jquery.suggestions",
+				"mediawiki.searchSuggest"
+			],
+			"messages": [
+				"bs-action-new-page-text",
+				"bs-action-new-page-title",
+				"bs-action-new-subpage-text",
+				"bs-action-new-subpage-title",
+				"bs-to-top-desc"
+			]
+		},
+		"skin.bluespicecalumma.tab": {
+			"scripts": [
+				"js/skin.bluespicecalumma.tab.js"
+			],
+			"dependencies": [
+				"mediawiki.cookie",
+				"mediawiki.util"
+			]
+		},
+		"skin.bluespicecalumma.accordion": {
+			"scripts": [
+				"js/skin.bluespicecalumma.accordion.js"
+			],
+			"dependencies": [
+				"mediawiki.cookie",
+				"mediawiki.util"
+			]
+		},
+		"skin.bluespicecalumma.panel": {
+			"scripts": [
+				"js/skin.bluespicecalumma.panel.js"
+			],
+			"dependencies": [
+				"ext.bluespice"
+			]
+		},
+		"skin.bluespicecalumma.flyout.recentchanges": {
+			"scripts": [
+				"js/bs.calumma.recentchanges.flyout.js",
+				"js/bs.calumma.graphicalList.RecentChanges.js"
+			],
+			"messages": [
+				"bs-calumma-recentchanges-column-header-title",
+				"bs-calumma-recentchanges-diff",
+				"bs-calumma-recentchanges-history"
+			],
+			"dependencies": [
+				"ext.bluespice"
+			]
+		},
+		"skin.bluespicecalumma.dynamicoffcanvas.styles": {
+			"styles": {
+				"stylesheets/graphicallist/graphicallist.less": { "media": "all" },
+				"stylesheets/graphicallist/graphicallist_sm.less": { "media": "all and ( max-width: 1000px )" },
+				"stylesheets/graphicallist/graphicallist_md.less": { "media": "all and ( min-width: 1001px )" }
+			},
+			"class": "\\BlueSpice\\ResourceModule\\LessVars"
+		},
+		"skin.bluespicecalumma.dynamicoffcanvas": {
+			"scripts": [
+				"js/DynamicGraphicalList.js",
+				"js/GraphicalList.js"
+			],
+			"messages": [
+				"bs-graphicallist-action-close",
+				"bs-graphicallist-action-list",
+				"bs-graphicallist-action-preview",
+				"bs-calumma-graphicallist-recentchanges-preview-btn-edit",
+				"bs-calumma-graphicallist-recentchanges-preview-btn-history"
+			],
+			"dependencies": [
+				"ext.bluespice"
+			]
+		},
+		"skin.bluespicecalumma.ajaxWatch": {
+			"scripts": [
+				"js/skin.bluespicecalumma.ajaxWatch.js"
+			],
+			"messages": [
+				"bs-calumma-pagetool-watch-tooltip",
+				"bs-calumma-pagetool-unwatch-tooltip",
+				"bs-calumma-page-watch-text",
+				"bs-calumma-page-watch-title",
+				"bs-calumma-page-unwatch-text",
+				"bs-calumma-page-unwatch-title"
+			]
+		},
+		"skin.bluespicecalumma.foucfix": {
+			"styles": [
+				"stylesheets/fixes/foucfix.less"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteSkinPath": "BlueSpiceCalumma/resources"
+	},
+	"config_prefix": "bsgBlueSpiceCalumma",
+	"config": {
+		"AssocLinksEnabledProviders": {
+			"value": [
+				"history-view",
+				"existing-siblings",
+				"mapped-siblings",
+				"custom-callback",
+				"rootpage-sibling",
+				"profile-classic",
+				"profile-modern"
+			]
+		},
+		"AssocLinksExistingSiblingsNamespaceBlacklist": {
+			"value": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+		},
+		"AssocLinksRootPageSiblingNamespaceBlacklist": {
+			"value": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+		},
+		"AssocLinksMappedSiblingsNamespaceMap": {
+			"value": []
+		},
+		"AssocLinksCustomCallback": {
+			"value": null
+		},
+		"BreadcrumbRootNodeEnabledProviders": {
+			"value": [
+				"namespace-mainpage",
+				"special-specialpages"
+			]
+		},
+		"BreadcrumbNamespacePortalPageRootNodePortalNamespace": {
+			"@note": "NS_PROJECT",
+			"value": 4
+		}
+	},
+	"callback": "BlueSpice\\Calumma\\Setup::onCallback",
+	"Hooks": {
+		"GetPreferences": "\\BlueSpice\\Calumma\\Hook\\GetPreferences\\UserPreferences::callback",
+		"MessageCache::get": "\\BlueSpice\\Calumma\\Hook\\MessageCacheGet\\ReplaceMWSidebar::callback",
+		"BeforePageDisplay": [
+			"\\BlueSpice\\Calumma\\Hook\\BeforePageDisplay\\HistoryBacklink::callback",
+			"\\BlueSpice\\Calumma\\Hook\\BeforePageDisplay\\AddFoucFix::callback"
+		],
+		"UserLoggedIn": "\\BlueSpice\\Calumma\\Hook\\UserLoggedIn\\AddNotification::callback"
+	},
+	"DefaultUserOptions": {
+		"bs-calumma-settings-navigation-main-collapse": false,
+		"bs-calumma-settings-sitetools-main-collapse": true
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 2
+}

@@ -1,0 +1,132 @@
+.sitetools-main {
+	right: 0;
+	min-height: 100%;
+	display: block;
+	position: fixed;
+	border-left: 2px solid @bs-seperator-line-color;
+	background-color: @sitetools-bg-color;
+	z-index: 11;
+	overflow: visible;
+
+	.separator {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid @sitetools-color;
+	}
+
+	#bs-toolpanetabs{
+		div.tab-content{
+			position: relative;
+			overflow: hidden;
+			-webkit-user-select: none; /* Safari 3.1+ */
+			-moz-user-select: none; /* Firefox 2+ */
+			-ms-user-select: none; /* IE 10+ */
+			user-select: none; /* Standard syntax */
+			direction: ltr;
+			color: @sitetools-tab-color;
+
+			* {
+				direction: ltr;
+			}
+
+			& > div {
+				position: relative;
+				top:0;
+			}
+
+			a {
+				white-space: nowrap;
+				color: @sitetools-color;
+			}
+			a:focus,
+			a:visited {
+				color: @sitetools-color;
+			}
+
+			&:hover {
+				overflow-y: auto;
+			}
+		}
+
+		//TODO: Generalize
+		#bs-category-links {
+			.panel-collapse {
+				padding: 0 20px;
+			}
+			.pill {
+				display: inline-block;
+				border-radius: 3px;
+				background-color: #f5f5f5;
+				border: 1px solid #dcdcdc;
+				padding: 0.3em;
+				margin: 0 4px 3px 0;
+				white-space: nowrap;
+				width: auto;
+				line-height: 20px;
+			}
+		}
+	}
+
+	.nav::before,
+	.nav::after {
+		display: none;
+	}
+
+	.nav.nav-pills {
+		height: @navigation-tabs-height;
+		background-color: @sitetools-tabs-bg-color;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 11px;
+
+		li {
+			height: @navigation-tabs-height;
+			a {
+				background-color: @sitetools-tab-bg-color;
+				color: @sitetools-tab-color;
+				height: 100%;
+				line-height: 40px;
+			}
+
+			&.active a {
+				background-color: @sitetools-tab-bg-color-active;
+				color: @sitetools-tab-color-active;
+			}
+
+			a:hover {
+				background-color: @sitetools-tab-bg-color-hover;
+				color: @sitetools-tab-color-hover;
+			}
+		}
+	}
+
+	ul {
+		padding: 0;
+		list-style: none;
+	}
+
+	h4 {
+		color: @sitetools-color;
+		text-align: center;
+		font-size: 20px;
+		font-weight: @font-weight-regular;
+	}
+
+	h5 {
+		color: @sitetools-color;
+		text-align: center;
+		font-size: 20px;
+	}
+
+	a,
+	a span {
+		color: @sitetools-color;
+	}
+
+	a:hover,
+	a:hover span {
+		background-color: transparent;
+		color: @sitetools-color-hover;
+	}
+
+}

@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"bluespiceeditnotifyconnector-action-message": "Skapa eller redigera avisering för valda namnrymder kommer att skickas för.",
+	"prefs-category-notifications": "Aviseringar på kategorier",
+	"bluespiceeditnotifyconnector-desc": "Utvidgar EditNotify med användaralternativ",
+	"prefs-categories": "Aviseringar vid kategorihändelser",
+	"prefs-namespace-notifications": "Aviseringar vid namnrymdshändelser"
+}

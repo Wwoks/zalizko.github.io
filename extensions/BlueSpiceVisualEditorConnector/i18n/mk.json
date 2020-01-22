@@ -1,0 +1,42 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250",
+			"Bjankuloski06"
+		]
+	},
+	"bs-visualeditorconnector-desc": "Поврзува BlueSpice со нагледниот уредник",
+	"bs-visualeditorconnector-enable-visualeditor": "Овозможи го нагледниот уредник за BlueSpаce-додатоците",
+	"bs-visualeditorconnector-upload-type-original": "Изворно",
+	"bs-visualeditorconnector-upload-type-simple": "Просто",
+	"bs-visualeditorconnector-upload-type": "Вид подигање",
+	"bs-visualeditorconnector-cancel-edit": "Откажи уредување",
+	"bs-visualeditor-nsm-label": "Нагледен уредник",
+	"bs-visualeditorconnector-inspector-tab-common-name": "Заеднички",
+	"bs-visualeditorconnector-inspector-tab-advanced-name": "Напредни",
+	"bs-visualeditorconnector-ve-style-option-description": "Изберете стил на табела",
+	"bs-vec-table-inspector-column": "Колона",
+	"bs-vec-table-inspector-row": "Ред",
+	"bs-vec-table-inspector-cell": "Ќелија",
+	"bs-vec-dialog-action-done": "Готово",
+	"bs-vec-dialog-action-safe": "Откажи",
+	"bs-vec-dialog-create-table-title": "Вметни табела",
+	"bs-vec-widget-text-direction-tooltip": "Вертикален текст",
+	"bs-vec-dialog-media-change-file": "Смени податотека",
+	"bs-visualeditorconnector-ve-style-option": "Стил на табела",
+	"apihelp-bs-vec-transformtowikitext-description": "Преобразува HTML на VisuаlEditor во WikiText",
+	"apihelp-bs-vec-transformtowikitext-summary": "Преобразува HTML на VisuаlEditor во WikiText",
+	"apihelp-bs-vec-transformtohtml-description": "Преобразува WikiText во HTML на VisuаlEditor",
+	"apihelp-bs-vec-transformtohtml-summary": "Преобразува WikiText во HTML на VisuаlEditor",
+	"apihelp-bs-vec-transformtowikitext-param-html": "HTML за VisuаlEditor што треба да се преобразува во WikiText",
+	"apihelp-bs-vec-transformtohtml-param-wikitext": "WikiText што треба да се преобразува во HTML за VisuаlEditor",
+	"apihelp-bs-vec-restbase-mock-description": "Осигурува примерни податоци за повикувања до RESTBase на VisualEditor",
+	"apihelp-bs-vec-restbase-mock-summary": "Осигурува примерни податоци за повикувања до RESTBase на VisualEditor",
+	"apihelp-bs-vec-restbase-mock-param-path": "Патека на RESTBase за којашто да се дадат примерни податоци",
+	"bs-visualeditor-linkcontext-label-label": "Натпис",
+	"bs-visualeditorconnector-simple-save-process": "Конфигурациска променлива за да се користи упростен процес на зачувување",
+	"bs-visualeditorconnector-dialog-media-meta-link": "Поврзи ја описната страница на податотеката",
+	"bs-vec-dialog-table-create-number-of-rows": "Број на редови",
+	"bs-vec-dialog-table-create-number-of-columns": "Број на столбови",
+	"bs-visualeditor-linkcontext-label-change": "Промени натпис"
+}

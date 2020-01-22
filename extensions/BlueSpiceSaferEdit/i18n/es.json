@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Macofe",
+			"AVIADOR",
+			"Ryo567"
+		]
+	},
+	"bs-saferedit-desc": "Intermediario de guardado de ediciones de la wiki",
+	"bs-saferedit-user-editing": "$1 está {{GENDER:$1|editando}} la página",
+	"bs-saferedit-someone-editing": "La página se está editando",
+	"bs-saferedit-pref-interval": "Intervalo de la versión de recuperación:",
+	"bs-saferedit-pref-shownameofeditinguser": "Mostrar el nombre del editor actual"
+}

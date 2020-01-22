@@ -1,0 +1,37 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido",
+			"Unai01"
+		]
+	},
+	"bs-visualeditorconnector-cancel-edit": "Cancelar edición",
+	"bs-visualeditor-nsm-label": "Editor visual",
+	"bs-visualeditorconnector-inspector-tab-common-name": "Comunes",
+	"bs-visualeditorconnector-inspector-tab-advanced-name": "Avanzadas",
+	"bs-visualeditorconnector-upload-type-original": "Original",
+	"bs-visualeditorconnector-ve-style-option": "Estilo de tabla",
+	"bs-visualeditorconnector-text-style-tool-color-label": "Color del texto",
+	"bs-visualeditorconnector-dialog-media-link": "Enlazar este archivo",
+	"bs-visualeditorconnector-dialog-media-embed": "Incrustar este archivo",
+	"bs-vec-table-inspector-column": "Columna",
+	"bs-vec-table-inspector-row": "Fila",
+	"bs-vec-table-inspector-cell": "Celda",
+	"bs-vec-table-style-column-width": "Anchura de columna",
+	"bs-vec-table-style-row-height": "Altura de fila (px)",
+	"bs-vec-contextitem-cell-style-add-options-title": "Opciones de celdas",
+	"bs-vec-contextitem-column-style-add-options-title": "Opciones de columna",
+	"bs-vec-contextitem-row-style-add-options-title": "Opciones de fila",
+	"bs-vec-contextitem-row-duplicate": "Duplicar fila",
+	"bs-vec-contextitem-column-duplicate": "Duplicar columna",
+	"bs-vec-contextitem-table-additional-options": "Opciones adicionales",
+	"bs-vec-dialog-table-create-number-of-rows": "Número de filas",
+	"bs-vec-dialog-table-create-number-of-columns": "Número de columnas",
+	"bs-vec-dialog-action-done": "Hecho",
+	"bs-vec-dialog-action-safe": "Cancelar",
+	"bs-vec-dialog-create-table-title": "Insertar tabla",
+	"bs-vec-widget-text-direction-tooltip": "Texo vertical",
+	"bs-visualeditorconnector-ve-style-option-description": "Elige el tipo de tabla",
+	"bs-visualeditor-linkcontext-label-change": "Cambiar etiqueta",
+	"bs-visualeditor-linkcontext-label-label": "Etiqueta"
+}
